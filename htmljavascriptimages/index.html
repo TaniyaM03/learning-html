@@ -1,0 +1,62 @@
+<!DOCTYPE html>>
+<html>
+
+<head>
+    <title>Javascriptimages</title>
+</head>
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        height: 100vh;
+        background-color: beige;
+    }
+
+    .FlowerBtn {
+        color: white;
+        background-color: blueviolet;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    #FlowerContainer{
+        width:70%;
+        height:300px;
+        object-fit: cover;
+    }
+    h1{
+        color:rgb(143, 19, 143);
+        text-decoration: underline;
+    }
+    
+</style>
+
+<body>
+
+    <h1>RANDOM FLOWERS</h1>
+    <img id="FlowerContainer" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_640.jpg">
+    <button class="FlowerBtn" onclick="displayFlower()">
+        Show a flower
+    </button>
+    <script>
+
+        function displayFlower() {
+            const pic = [
+                "https://cdn.pixabay.com/photo/2014/04/14/20/11/pink-324175_1280.jpg",
+                "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_640.jpg",
+                "https://cdn.pixabay.com/photo/2015/04/19/08/32/rose-729509_640.jpg",
+                "https://cdn.pixabay.com/photo/2015/10/09/00/55/lotus-978659_640.jpg",
+                "https://cdn.pixabay.com/photo/2013/07/30/12/25/bouquet-168831_640.jpg"];
+            var pickSrc = pic[Math.floor(Math.random() * pic.length)];
+            document.getElementById('FlowerContainer').src = pickSrc;
+        }
+    </script>
+
+</body>
+
+</html>
