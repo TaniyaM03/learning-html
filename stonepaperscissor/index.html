@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stone Paper Scissor</title>
+</head>
+<style>
+    #Game {
+        width: 70%;
+        height: 350px;
+
+    }
+
+    h1 {
+        font-size: 45px;
+        font-weight: 600;
+
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://media.istockphoto.com/id/664280248/vector/computer-game-device-social-gaming-vector-sketch-doodles-seamless-pattern.jpg?s=612x612&w=0&k=20&c=bWVrAuPL76UMrrbseRNmF5WlJ2mHMRQ5E3ta3Qe3Zgw=");
+    }
+
+    .GameBtn {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(220, 209, 228);
+        font-size: 25px;
+        font-weight: 700;
+        padding: 10px;
+        border: none;
+
+    }
+</style>
+
+<body>
+    <h1>Stone-Paper-Scissor</h1>
+    <img id="Game" src="https://static.thenounproject.com/png/477918-200.png">
+    <button class="GameBtn" onclick="displayMove()">
+        PLAY!
+    </button>
+    <script>
+
+        function displayMove() {
+            const moves = [
+                "https://static.thenounproject.com/png/477919-200.png",
+                "https://static.thenounproject.com/png/477912-200.png",
+                "https://static.thenounproject.com/png/477918-200.png"];
+            var pickSrc = moves[Math.floor(Math.random() * moves.length)];
+            document.getElementById('Game').src = pickSrc;
+        }
+    </script>
+</body>
+
+</html>
